@@ -1,75 +1,81 @@
+/* Основные стили для body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
 }
 
+/* Стиль для заголовка */
 header {
-    background-color: #2a9d8f;
+    background: #007bff;
     color: white;
+    padding: 10px 0;
     text-align: center;
-    padding: 1.5em 0;
 }
 
-header h1 {
-    font-size: 2.5em;
-}
-
+/* Стиль для слайдера */
 .slider {
-    width: 100%;
-    overflow: hidden;
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content: center; /* Выравнивает слайдер по центру */
+    overflow: hidden; /* Убирает прокрутку */
+    width: 100%; /* Занимает всю ширину */
+    max-width: 1200px; /* Задайте максимальную ширину для контроля размера */
+    margin: auto;
+    position: relative; /* Для позиционирования элементов */
 }
 
-.slides img {
+/* Статичные слайды */
+.static-slide {
+    flex: 1;
+    width: 100%;
+    max-width: 400px; /* Задает ширину изображения */
+    height: auto;
+    margin: 0 10px; /* Разделяет изображения небольшим отступом */
+    object-fit: cover; /* Масштабирует изображение, сохраняя пропорции */
+    transition: transform 0.5s, filter 0.5s; /* Плавный переход для эффектов */
+    border-radius: 10px; /* Закругленные углы для более мягкого вида */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень для глубины */
+}
+
+/* Эффект при наведении на изображение */
+.static-slide:hover {
+    transform: scale(1.05); /* Увеличивает изображение при наведении */
+    filter: brightness(1.1); /* Увеличивает яркость при наведении */
+}
+
+/* Стиль для новостного раздела */
+.news {
+    margin: 20px;
+}
+
+/* Стиль для каждой новостной статьи */
+.news-item {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/* Стиль для изображений новостей */
+.news-item img {
     width: 100%;
     height: auto;
-    animation: slide 15s infinite;
 }
 
-@keyframes slide {
-    0%, 33.33% { transform: translateX(0); }
-    33.33%, 66.66% { transform: translateX(-100%); }
-    66.66%, 100% { transform: translateX(-200%); }
+/* Стиль для контента новостей */
+.content {
+    padding: 15px;
 }
 
-.news {
-    padding: 2em;
-    text-align: center;
-}
-
-.news h2 {
-    color: #264653;
-}
-
-.news-item {
-    display: flex;
-    align-items: center;
-    margin: 1em 0;
-    background: white;
-    padding: 1em;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.news-item img {
-    width: 100px;
-    margin-right: 1em;
-    border-radius: 8px;
-}
-
-.content h3 {
-    color: #e76f51;
-}
-
+/* Стиль для футера */
 footer {
-    background-color: #2a9d8f;
-    color: white;
     text-align: center;
-    padding: 1em;
-    margin-top: 20px;
+    padding: 10px 0;
+    background: #007bff;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
