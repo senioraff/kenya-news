@@ -27,12 +27,9 @@ header {
 
 /* Статичные слайды */
 .static-slide {
-    flex: 1;
     width: 100%;
-    max-width: 400px; /* Задает ширину изображения */
     height: auto;
-    margin: 0 10px; /* Разделяет изображения небольшим отступом */
-    object-fit: cover; /* Масштабирует изображение, сохраняя пропорции */
+    max-width: 100%; /* Изображения не будут выходить за пределы слайдера */
     transition: transform 0.5s, filter 0.5s; /* Плавный переход для эффектов */
     border-radius: 10px; /* Закругленные углы для более мягкого вида */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень для глубины */
@@ -42,6 +39,27 @@ header {
 .static-slide:hover {
     transform: scale(1.05); /* Увеличивает изображение при наведении */
     filter: brightness(1.1); /* Увеличивает яркость при наведении */
+}
+
+/* Кнопки навигации для слайдера */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 10px; /* Отступ от левого края */
+}
+
+.next {
+    right: 10px; /* Отступ от правого края */
 }
 
 /* Стиль для новостного раздела */
@@ -67,6 +85,18 @@ header {
 /* Стиль для контента новостей */
 .content {
     padding: 15px;
+}
+
+/* Социальные сети */
+.social-media {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
 }
 
 /* Стиль для футера */
