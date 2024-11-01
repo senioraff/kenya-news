@@ -89,14 +89,21 @@ header {
 
 /* Социальные сети */
 .social-media {
-    text-align: center;
+    text-align: center; /* Выровнять текст по центру */
     margin: 20px 0;
 }
 
 .social-media a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #007bff;
+    margin: 0 10px; /* Отступы между ссылками */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #007bff; /* Цвет ссылок */
+    font-weight: bold; /* Жирный текст для ссылок */
+}
+
+/* Добавьте стиль для кнопок */
+.social-media a:hover {
+    color: #0056b3; /* Цвет при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
 }
 
 /* Стиль для футера */
